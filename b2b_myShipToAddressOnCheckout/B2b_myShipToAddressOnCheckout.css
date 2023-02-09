@@ -1,0 +1,21 @@
+.lb{
+    color: azure;
+}
+lightning-card{
+    position: absolute;
+    left: 9.79%;
+    right: 80%;
+    top: 19.6%;
+    bottom: 78.41%;
+}
+.ship{
+    width: 233px;
+    height: 24px;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+/* identical to box height, or 150% */
+    color: #323232;
+}

@@ -1,0 +1,33 @@
+<template>
+    <div class="slds-theme_default">
+      <div class="slds-p-around_medium">
+        <lightning-progress-indicator
+          current-step={stepInfo.data}
+          type={type}
+          variant={variant}
+          
+        >
+          <template for:each={steps} for:item="step">
+            <!--
+            <div key={step.value} class="slds-truncate slds-p-bottom_x-small" title={step.label}>{step.label}
+            </br></br>
+            </div>
+           -->
+           <template if:true={isTypeBase}>
+            <p style="position: relative; top: -20px;left:90px" key={step.value}>{step.label}</p> 
+          </template>
+            <lightning-progress-step
+              onstepfocus={stepInfo.data}
+              label={step.label}
+              value={step.value}
+              key={step.value}
+            ></lightning-progress-step>
+          </template>
+        </lightning-progress-indicator>
+      </div>
+    </div>
+    
+    <c-b2b_cometdlwc channel="CartCheckoutSession__e" onmessage={messageReceived}></c-b2b_cometdlwc>
+    
+  
+  </template>
